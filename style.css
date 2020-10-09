@@ -2,6 +2,7 @@
 
 body {
     margin: 0px;
+    background-color: #fff;
     background-image: linear-gradient(180deg, #FFFFFF 0%, #6284FF 45%, #FF0000 100%);
 }
 
@@ -89,9 +90,17 @@ a:hover {
 
 /* image header */
 
-.imghead {
+#imghead {
     display: flex;
     justify-content: center;
+}
+
+
+/* sliders */
+
+#slider,
+#slider1 {
+    display: none;
 }
 
 
@@ -175,6 +184,9 @@ footer a {
     .flag {
         justify-content: center;
     }
+    #imghead {
+        display: none;
+    }
     h3 {
         text-align: center;
     }
@@ -212,12 +224,58 @@ footer a {
     }
     .flex {
         display: block;
-        flex-flow: column-reverse;
     }
-    .imgotaku {
-        margin: 0 auto;
-    }
+    .imgotaku,
     .imgotaku1 {
         display: none;
+    }
+    #slider,
+    #slider1 {
+        display: block;
+        position: relative;
+        width: 100%;
+        margin: auto;
+    }
+    #next,
+    #last {
+        height: 40px;
+        width: 10px;
+        cursor: pointer;
+        transition: opacity 1s ease;
+        position: absolute;
+        top: 130px;
+        color: rgba(220, 220, 220, 0.8);
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 10px;
+    }
+    #last1,
+    #next1 {
+        height: 40px;
+        width: 10px;
+        cursor: pointer;
+        transition: opacity 1s ease;
+        position: absolute;
+        top: 100px;
+        color: rgba(220, 220, 220, 0.8);
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 10px;
+        opacity: 1;
+    }
+    s #last,
+    #last1 {
+        left: 0;
+    }
+    #next,
+    #next1 {
+        right: 0;
+    }
+    #slider1:hover #last1,
+    #slider1:hover #next1,
+    #slider:hover #last,
+    #slider:hover #next {
+        opacity: 1;
+    }
+    .chevron {
+        padding-top: 15px;
     }
 }
